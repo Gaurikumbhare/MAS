@@ -21,7 +21,7 @@ export default function Footer() {
           <div className={styles.links}>
             <h4>Quick Links</h4>
             <ul>
-              <li><Link href="#about">About Us</Link></li>
+              <li><Link href="/about">About Us</Link></li>
               <li><Link href="/programs">Programs</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
