@@ -23,6 +23,8 @@ export default function Navbar() {
             <li><Link href="/about" className={styles.link} onClick={toggleMenu}>About Us</Link></li>
             <li><Link href="/programs" className={styles.link} onClick={toggleMenu}>Programs</Link></li>
             <li><Link href="/contact" className={styles.link} onClick={toggleMenu}>Contact Us</Link></li>
+            <img src="/sticker-sun.png" alt="Fun Sun Sticker" className={styles.menuSticker1} />
+            <img src="/sticker-flower.png" alt="Fun Flower Sticker" className={styles.menuSticker2} />
           </ul>
 
           <div className={styles.actions}>

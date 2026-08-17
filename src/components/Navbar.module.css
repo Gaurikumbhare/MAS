@@ -104,6 +104,10 @@
   width: 100%;
 }
 
+.menuSticker1, .menuSticker2 {
+  display: none;
+}
+
 .actions {
   display: flex;
   align-items: center;
@@ -162,6 +166,30 @@
 
   .menu.menuOpen {
     left: 0;
+  }
+
+  .menuSticker1 {
+    display: block;
+    position: absolute;
+    width: 100px;
+    bottom: 10%;
+    right: 15%;
+    animation: float 4s ease-in-out infinite;
+    pointer-events: none;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+  }
+
+  .menuSticker2 {
+    display: block;
+    position: absolute;
+    width: 110px;
+    top: 15%;
+    left: 10%;
+    animation: float 5s ease-in-out infinite reverse;
+    pointer-events: none;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
   }
 
   .hamburger {
