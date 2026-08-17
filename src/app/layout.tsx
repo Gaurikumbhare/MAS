@@ -13,8 +13,8 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Miles Along Smiles - Nurturing Little Minds",
-  description: "A nurturing early-learning and childcare space designed to make a child's early years joyful, meaningful, and full of discovery.",
+  title: "Best Preschool & Daycare in Nagpur | Miles Along Smiles",
+  description: "Looking for the best preschool in Nagpur? Miles Along Smiles provides a premium early-learning, kindergarten, and daycare environment. Experience joyful, play-based education.",
 };
 
 import Navbar from '@/components/Navbar';

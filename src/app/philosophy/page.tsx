@@ -1,3 +1,10 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Our Philosophy | Play-Based Learning | Miles Along Smiles",
+  description: "Learn about our child-centered approach to education. We believe in play-based learning, interactive environments, and nurturing the unique potential of every child."
+};
+
 export default function PhilosophyPage() {
   return (
     <main>
