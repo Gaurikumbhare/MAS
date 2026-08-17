@@ -1,4 +1,5 @@
 import styles from './Gallery.module.css';
+import SmartVideo from './SmartVideo';
 
 const items = [
   '/IMG_3814.mp4',
@@ -39,7 +40,7 @@ export default function Gallery() {
           {items.map((item, i) => (
             <div key={i} className={styles.item}>
               {item.endsWith('.MOV') || item.endsWith('.mp4') ? (
-                <video src={`${item}#t=0.1`} autoPlay loop muted playsInline className={styles.image} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                <SmartVideo src={`${item}#t=0.1`} className={styles.image} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
               ) : (
                 <img src={item} alt={`Gallery image ${i + 1}`} className={styles.image} />
               )}

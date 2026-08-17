@@ -1,4 +1,5 @@
 import styles from './ProgramsList.module.css';
+import SmartVideo from '../SmartVideo';
 
 const programs = [
   {
@@ -54,7 +55,7 @@ export default function ProgramsList() {
             <div key={program.id} className={styles.card}>
               <div className={styles.imageWrapper}>
                 {program.image.endsWith('.MOV') || program.image.endsWith('.mp4') ? (
-                  <video src={`${program.image}#t=0.1`} autoPlay loop muted playsInline className={styles.image} />
+                  <SmartVideo src={`${program.image}#t=0.1`} className={styles.image} />
                 ) : (
                   <img src={program.image} alt={program.title} className={styles.image} />
                 )}
