@@ -81,7 +81,7 @@
 
 @media (max-width: 900px) {
   .founderContent {
-    flex-direction: column;
+    /* removed flex-direction: column; */
     text-align: center;
     gap: 2.5rem;
   }

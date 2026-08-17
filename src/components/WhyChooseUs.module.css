@@ -214,6 +214,6 @@
 
 @media (max-width: 576px) {
   .cardsGrid {
-    grid-template-columns: 1fr;
+    /* removed grid-template-columns: 1fr; */
   }
 }

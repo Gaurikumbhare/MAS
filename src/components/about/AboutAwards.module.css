@@ -102,7 +102,7 @@
 
 @media (max-width: 768px) {
   .content {
-    flex-direction: column;
+    /* removed flex-direction: column; */
   }
   .rightColumn {
     position: relative;
@@ -113,6 +113,6 @@
     opacity: 1;
   }
   .grid {
-    flex-direction: column;
+    /* removed flex-direction: column; */
   }
 }

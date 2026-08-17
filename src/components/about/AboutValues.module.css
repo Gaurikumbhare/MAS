@@ -56,7 +56,5 @@
 }
 
 @media (max-width: 768px) {
-  .grid {
-    flex-direction: column;
-  }
+  /* removed column flex-direction */
 }

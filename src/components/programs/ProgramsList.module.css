@@ -107,9 +107,7 @@
 }
 
 @media (max-width: 992px) {
-  .card, .card:nth-child(even) {
-    flex-direction: column;
-  }
+  /* removed flex-direction column override */
   .imageWrapper, .content {
     width: 100%;
   }

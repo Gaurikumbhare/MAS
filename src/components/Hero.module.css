@@ -98,7 +98,7 @@
     padding: 4rem 0;
   }
   .title { font-size: 2.5rem; }
-  .actions { flex-direction: column; }
+  .actions { /* removed flex-direction: column; */ }
   .badge h2 { font-size: 2rem; }
   .handwriting { font-size: 2.5rem; }
 }

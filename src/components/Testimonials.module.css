@@ -213,7 +213,7 @@
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
+    /* removed grid-template-columns: 1fr; */
   }
   .header h2 {
     font-size: 2.5rem;
