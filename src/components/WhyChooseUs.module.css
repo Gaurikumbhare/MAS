@@ -208,7 +208,7 @@
     gap: 3rem 1.5rem;
   }
   .dashedLineContainer {
-    display: none; /* Hide dashed line on smaller screens */
+    /* display: none removed so line shows on mobile */
   }
 }
 
