@@ -124,3 +124,11 @@
     right: 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .programsSection { padding: 3rem 0; }
+  .grid { gap: 3rem; }
+  .imageWrapper { height: 250px; }
+  .title { font-size: 1.8rem; }
+  .content { padding: 1.5rem; }
+}

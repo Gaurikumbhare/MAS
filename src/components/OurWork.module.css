@@ -204,5 +204,12 @@
 }
 
 @media (max-width: 768px) {
+  .programs { padding: 4rem 0; }
   .programsGrid { grid-template-columns: 1fr; }
+  .titleWrapper h2 { font-size: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .programs { padding: 3rem 0; }
+  .titleWrapper h2 { font-size: 2rem; }
 }

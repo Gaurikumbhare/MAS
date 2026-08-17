@@ -87,8 +87,49 @@
   transform: scale(1.1) rotate(2deg); /* Playful tilt on hover */
 }
 
+.stickerPlane {
+  top: 10%;
+  left: 8%;
+  width: 120px;
+  z-index: 0;
+}
+
+.stickerStar {
+  top: 25%;
+  right: 12%;
+  width: 90px;
+  z-index: 0;
+}
+
+.stickerHeart {
+  bottom: 20%;
+  left: 10%;
+  width: 100px;
+  z-index: 0;
+}
+
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .titleWrapper h2 {
+    font-size: 2.5rem;
+  }
+  .stickerPlane, .stickerStar, .stickerHeart {
+    width: 60px; /* Shrink stickers on tablets */
+  }
+  .stickerPlane { left: 2%; }
+  .stickerStar { right: 2%; }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .titleWrapper h2 {
+    font-size: 2rem;
+  }
+  .stickerPlane, .stickerStar, .stickerHeart, .decorHeart, .decorStar, .bgElement {
+    display: none; /* Hide decorative stickers on small phones to reduce clutter */
   }
 }

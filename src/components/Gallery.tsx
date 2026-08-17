@@ -1,12 +1,12 @@
 import styles from './Gallery.module.css';
 
 const items = [
-  '/IMG_3814.MOV',
-  '/IMG_3833.MOV',
-  '/IMG_3703.MOV',
-  '/IMG_3705.MOV',
-  '/IMG_3742.MOV',
-  '/IMG_3760.MOV',
+  '/IMG_3814.mp4',
+  '/IMG_3833.mp4',
+  '/IMG_3703.mp4',
+  '/IMG_3705.mp4',
+  '/IMG_3742.mp4',
+  '/IMG_3760.mp4',
 ];
 
 export default function Gallery() {
@@ -15,6 +15,9 @@ export default function Gallery() {
       {/* Decorations */}
       <div className={styles.decorHeart}>♡</div>
       <div className={styles.decorStar}>☆</div>
+      <img src="/sticker-paper-plane.png" alt="Paper Plane" className={`sticker ${styles.stickerPlane}`} />
+      <img src="/sticker-star.png" alt="Star Doodle" className={`sticker sticker-delay-1 ${styles.stickerStar}`} />
+      <img src="/sticker-heart.png" alt="Heart Doodle" className={`sticker sticker-delay-3 ${styles.stickerHeart}`} />
 
       <div className="container">
         <div className={styles.header}>
@@ -35,7 +38,7 @@ export default function Gallery() {
         <div className={styles.grid}>
           {items.map((item, i) => (
             <div key={i} className={styles.item}>
-              {item.endsWith('.MOV') ? (
+              {item.endsWith('.MOV') || item.endsWith('.mp4') ? (
                 <video src={`${item}#t=0.1`} autoPlay loop muted playsInline className={styles.image} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
               ) : (
                 <img src={item} alt={`Gallery image ${i + 1}`} className={styles.image} />

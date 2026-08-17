@@ -99,7 +99,7 @@
 
 .subtitle {
   font-size: 1.25rem;
-  color: var(--text-light);
+  color: #000;
 }
 
 /* Grid & Cards */
@@ -198,11 +198,24 @@
   }
 }
 
+@media (max-width: 768px) {
+  .facilities { padding: 4rem 0; }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
   }
   .header h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
+}
+
+@media (max-width: 480px) {
+  .facilities { padding: 3rem 0; }
+  .header h2 { font-size: 2rem; }
+  .subtitle { font-size: 1rem; }
 }

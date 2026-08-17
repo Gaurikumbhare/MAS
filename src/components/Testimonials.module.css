@@ -215,4 +215,17 @@
   .grid {
     grid-template-columns: 1fr;
   }
+  .header h2 {
+    font-size: 2.5rem;
+  }
+  .titleWrapper {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+  .quoteIcon {
+    font-size: 3.5rem;
+  }
 }

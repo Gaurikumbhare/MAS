@@ -3,7 +3,7 @@ import styles from './Facilities.module.css';
 const facilities = [
   { id: 1, title: 'Child-Safe Environment', icon: '🛡️', colorClass: styles.purpleCard, image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80' },
   { id: 2, title: 'Interactive Play Zones', icon: '🛝', colorClass: styles.yellowCard, image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80' },
-  { id: 3, title: 'Hygienic Dining', icon: '🍱', colorClass: styles.greenCard, image: 'https://images.unsplash.com/photo-1540479859555-17af45c78602?auto=format&fit=crop&w=800&q=80' },
+  { id: 3, title: 'Clean Classrooms', icon: '✨', colorClass: styles.greenCard, image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80' },
   { id: 4, title: 'CCTV Surveillance', icon: '📹', colorClass: styles.purpleCard, image: 'https://images.unsplash.com/photo-1549109926-58f039549485?auto=format&fit=crop&w=800&q=80' },
 ];
 
@@ -56,7 +56,7 @@ export default function Facilities() {
               </svg>
             </div>
           </div>
-          <p className={styles.subtitle}>A safe, inspiring and well-equipped environment for every child.</p>
+          <p className={styles.subtitle} style={{ color: '#000000', fontWeight: 'bold' }}>A safe, inspiring and well-equipped environment for every child.</p>
         </div>
         
         <div className={styles.grid}>

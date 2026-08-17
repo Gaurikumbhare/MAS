@@ -12,7 +12,7 @@ const programs = [
       'Guided parent-toddler bonding activities',
       'Early socialization with peers'
     ],
-    image: '/IMG_3820.MOV',
+    image: '/IMG_3820.mp4',
     color: '#ff9a9e'
   },
   {
@@ -26,7 +26,7 @@ const programs = [
       'Foundational literacy and numeracy skills',
       'Safe, nurturing, and stimulating classrooms'
     ],
-    image: '/IMG_3778.MOV',
+    image: '/IMG_3778.mp4',
     color: '#a1c4fd'
   },
   {
@@ -40,7 +40,7 @@ const programs = [
       'Engaging after-school activities and free play',
       'Attentive, certified, and compassionate staff'
     ],
-    image: '/IMG_3850.MOV',
+    image: '/IMG_3850.mp4',
     color: '#fbc2eb'
   }
 ];
@@ -53,7 +53,7 @@ export default function ProgramsList() {
           {programs.map((program) => (
             <div key={program.id} className={styles.card}>
               <div className={styles.imageWrapper}>
-                {program.image.endsWith('.MOV') ? (
+                {program.image.endsWith('.MOV') || program.image.endsWith('.mp4') ? (
                   <video src={`${program.image}#t=0.1`} autoPlay loop muted playsInline className={styles.image} />
                 ) : (
                   <img src={program.image} alt={program.title} className={styles.image} />
