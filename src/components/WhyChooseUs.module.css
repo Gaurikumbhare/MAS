@@ -1,0 +1,219 @@
+.whyUsSection {
+  padding: 6rem 0;
+  background-color: #ebe3f7; /* Light purple background */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.title {
+  color: #6a1b9a; /* Deep purple */
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.flowContainer {
+  position: relative;
+  width: 100%;
+}
+
+.dashedLineContainer {
+  position: absolute;
+  top: 110px; /* Aligned roughly with the center of the 220px images */
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.dashedSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Image Wrapper & Shapes */
+.imageWrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Pseudo-elements for the dashed colored outlines */
+.imageWrapper::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-width: 2px;
+  border-style: dashed;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Polaroid Left */
+.shapePolaroidLeft .image {
+  border: 10px solid #fff;
+  transform: rotate(-10deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.shapePolaroidLeft::after {
+  border-color: #7e57c2;
+  transform: rotate(-10deg);
+}
+
+/* Circle */
+.shapeCircle .image {
+  border-radius: 50%;
+  border: 10px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.shapeCircle::after {
+  border-radius: 50%;
+  border-color: #ff9800; /* Yellow/Orange */
+}
+
+/* Polaroid Right */
+.shapePolaroidRight .image {
+  border: 10px solid #fff;
+  transform: rotate(5deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.shapePolaroidRight::after {
+  border-color: #7e57c2;
+  transform: rotate(5deg);
+}
+
+/* Triangle */
+.shapeTriangle .image {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.shapeTriangle::after {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border-color: #ff9800;
+  /* Getting a dashed border on a clip-path triangle is notoriously hard in pure CSS.
+     We will use a thick dashed border on a regular box that is clipped, but it doesn't follow the edge well.
+     A cleaner approach is to just use a drop-shadow or omit the dashed border for the triangle to keep it simple,
+     but we'll try a basic approach: just a slightly larger clipped element behind it. */
+  background: transparent;
+  border: none; /* Override standard dashed */
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #ff9800 10px, #ff9800 20px);
+  opacity: 0.3;
+}
+/* For the white border inside the triangle, we nest a slightly smaller triangle, 
+   but since we are applying clip-path directly to the img, we need a wrapper trick. 
+   Let's keep it simple: */
+.shapeTriangle .image {
+  clip-path: polygon(50% 5%, 5% 95%, 95% 95%); /* Make it slightly smaller */
+  background-color: white; 
+  padding: 10px;
+}
+/* Better triangle with white border */
+.shapeTriangle {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  clip-path: none;
+}
+.shapeTriangle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='50,0 0,100 100,100' fill='white'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+.shapeTriangle .image {
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.shapeTriangle::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: -2;
+  border: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='50,2 2,98 98,98' fill='none' stroke='%23ff9800' stroke-width='2' stroke-dasharray='4,4'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+
+.cardTitle {
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1.5rem;
+  }
+  .dashedLineContainer {
+    display: none; /* Hide dashed line on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}

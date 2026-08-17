@@ -1,0 +1,25 @@
+.metrics {
+  background-color: var(--primary);
+  color: var(--bg-main);
+  text-align: center;
+}
+
+.item {
+  padding: var(--spacing-lg);
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--bg-main);
+}
+
+.label {
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}

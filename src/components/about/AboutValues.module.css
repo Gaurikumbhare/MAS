@@ -1,0 +1,63 @@
+.valuesSection {
+  padding: 2rem 0 4rem;
+  background-color: #f6f5ef; /* Matches the beige background */
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  flex: 1;
+  min-width: 300px;
+}
+
+.cardVision {
+  background-color: #f1b399; /* Peach */
+}
+
+.cardMission {
+  background-color: #79d89d; /* Green */
+}
+
+.cardPhilosophy {
+  background-color: #84c0e6; /* Blue */
+}
+
+.titleVision {
+  color: #1a5ca6; /* Dark blue */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.titleMission {
+  color: #136a44; /* Dark green */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.titlePhilosophy {
+  color: #1a5ca6; /* Dark blue */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: #111;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

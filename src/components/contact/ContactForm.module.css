@@ -1,0 +1,182 @@
+.contactSection {
+  background-color: #f6f5ef;
+  min-height: 100vh;
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+/* Left Panel */
+.leftPanel {
+  flex: 1;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3rem;
+  color: #0b5b9e; /* Blue matching screenshot */
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.addressBox p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0.25rem 0;
+}
+
+.characterWrapper {
+  margin-top: 3rem;
+  max-width: 300px;
+  align-self: center; /* or flex-start if we want it aligned left */
+}
+
+.character {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Right Panel */
+.rightPanel {
+  flex: 1.2;
+  background-color: #f1dac6; /* Peach/beige */
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.formIntro {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.input, .select, .textarea {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: #000;
+  outline: none;
+}
+
+.input::placeholder, .select::placeholder, .textarea::placeholder {
+  color: #333;
+}
+
+:global(option) {
+  color: #000;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+/* OTP Buttons */
+.otpRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btnOtpSend {
+  background-color: #ee8762; /* Orange */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnOtpSend:hover {
+  opacity: 0.9;
+}
+
+.btnOtpVerify {
+  background-color: #c4ccd3; /* Grey */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+.btnSubmit {
+  background-color: #94999c; /* Grey submit button */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.btnSubmit:hover {
+  background-color: #7b8083;
+}
+
+@media (max-width: 900px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+  .leftPanel {
+    padding-right: 0;
+    margin-bottom: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .otpRow {
+    flex-direction: column;
+    justify-content: stretch;
+  }
+  .rightPanel {
+    padding: 2rem 1.5rem;
+  }
+}

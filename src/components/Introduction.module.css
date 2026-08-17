@@ -1,0 +1,130 @@
+.introSection {
+  position: relative;
+  padding: 6rem 0;
+  background-color: #fdfaf6; /* Very light, warm off-white */
+  overflow: hidden;
+  /* Next.js hot reload trigger */
+}
+
+.backgroundGlows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glowLeft {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(243, 224, 252, 0.7) 0%, rgba(255,255,255,0) 70%);
+  transform: translateY(-50%);
+}
+
+.glowRight {
+  position: absolute;
+  top: 20%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(228, 246, 235, 0.7) 0%, rgba(255,255,255,0) 70%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #8e24aa; /* Purple color matching screenshot */
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+}
+
+.paragraph {
+  color: #666;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+.pillsContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #fff3e0; /* Light orange/yellow border */
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  min-width: 260px;
+}
+
+.iconCircle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.iconBlue {
+  background-color: #e3f2fd;
+}
+
+.iconPink {
+  background-color: #fce4ec;
+}
+
+.iconYellow {
+  background-color: #fff9c4;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.pillText {
+  color: #6a1b9a; /* Deep purple text */
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .pillsContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pill {
+    padding: 1rem;
+  }
+}

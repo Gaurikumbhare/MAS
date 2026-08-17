@@ -1,0 +1,70 @@
+.curriculum {
+  background-color: var(--bg-surface);
+  text-align: center;
+}
+
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.header h2 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.header p {
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.card {
+  background: var(--bg-main);
+  padding: var(--spacing-xl) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--secondary);
+  transition: transform var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  display: block;
+}
+
+.card h3 {
+  color: var(--primary-dark);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

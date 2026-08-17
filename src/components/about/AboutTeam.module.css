@@ -1,0 +1,101 @@
+.teamSection {
+  padding: 6rem 0;
+  background-color: #f6f5ef;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.decoration {
+  font-size: 1.5rem;
+  color: var(--accent-orange);
+}
+
+.founderContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.founderCard {
+  width: 320px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  border: 4px solid #fff;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founderBio {
+  flex: 1;
+}
+
+.founderName {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.founderRole {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.founderText {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  font-style: italic;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--secondary);
+}
+
+@media (max-width: 900px) {
+  .founderContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+  .founderText {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .founderCard {
+    width: 260px;
+  }
+  .imageWrapper {
+    height: 320px;
+  }
+}

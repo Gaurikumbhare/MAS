@@ -1,0 +1,169 @@
+.journeySection {
+  padding: 4rem 0 6rem;
+  background-color: #f6f5ef;
+  position: relative;
+  overflow: hidden;
+}
+
+.flexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftColumn {
+  flex: 1;
+  position: relative;
+  max-width: 500px;
+}
+
+.titleWrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.beeIcon {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  font-size: 2rem;
+}
+
+.title {
+  color: #1565c0;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.giraffeWrapper {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  margin: 0 auto -50px auto; /* Overlap with year box */
+  z-index: 1;
+}
+
+.giraffeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.yearBox {
+  background-color: #f7d268; /* Yellow */
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.yearNumber {
+  color: #1565c0;
+  font-size: 5rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.yearText {
+  color: #333;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Right Side */
+.rightColumn {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 500px;
+}
+
+.radialContainer {
+  position: absolute;
+  right: -50px; /* Push off screen edge slightly */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+}
+
+.centerDot {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 120px;
+  background-color: #1565c0;
+  border-radius: 60px 0 0 60px;
+  z-index: 10;
+}
+
+.line {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform-origin: right center;
+  width: 100%;
+  height: 1px;
+  background-color: #666;
+}
+
+.line1 { transform: translateY(-50%) rotate(25deg); }
+.line2 { transform: translateY(-50%) rotate(0deg); }
+.line3 { transform: translateY(-50%) rotate(-25deg); }
+.line4 { transform: translateY(-50%) rotate(-50deg); }
+
+.lineText {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  background: #f6f5ef;
+  padding-right: 10px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.lineTextActive {
+  position: absolute;
+  left: 0;
+  top: -25px;
+  background: #f6f5ef;
+  padding-right: 10px;
+  color: #1565c0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.activeLine {
+  background-color: #1565c0;
+  height: 2px;
+}
+
+@media (max-width: 768px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+  .rightColumn {
+    width: 100%;
+    margin-top: 4rem;
+    justify-content: center;
+  }
+  .radialContainer {
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  .centerDot {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}

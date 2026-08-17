@@ -1,0 +1,45 @@
+"use client";
+
+import Link from 'next/link';
+import { useState } from 'react';
+import styles from './Navbar.module.css';
+
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <header className={styles.header}>
+      <div className="container">
+        <nav className={styles.nav}>
+          <Link href="/" className={styles.logo}>
+            <div className={styles.logoTop}>
+              MilesAl <span className={styles.logoIcon}>😊</span> ng
+            </div>
+            <div className={styles.logoBottom}>Smiles</div>
+          </Link>
+          <ul className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
+            <li><Link href="/" className={styles.link} onClick={toggleMenu}>Home</Link></li>
+            <li><Link href="/about" className={styles.link} onClick={toggleMenu}>About Us</Link></li>
+            <li><Link href="/programs" className={styles.link} onClick={toggleMenu}>Programs</Link></li>
+            <li><Link href="/contact" className={styles.link} onClick={toggleMenu}>Contact Us</Link></li>
+          </ul>
+
+          <div className={styles.actions}>
+            <Link href="/contact?purpose=visit" style={{ textDecoration: 'none' }}>
+              <button className="btn btn-primary">Book a Visit</button>
+            </Link>
+            <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
+              <span className={`${styles.bar} ${isMenuOpen ? styles.open : ''}`}></span>
+              <span className={`${styles.bar} ${isMenuOpen ? styles.open : ''}`}></span>
+              <span className={`${styles.bar} ${isMenuOpen ? styles.open : ''}`}></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+}
