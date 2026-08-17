@@ -15,6 +15,11 @@
 }
 
 /* Custom CSS Logo */
+.logoImage {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+}
 .logo {
   display: flex;
   flex-direction: column;

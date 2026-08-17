@@ -16,10 +16,7 @@ export default function Navbar() {
       <div className="container">
         <nav className={styles.nav}>
           <Link href="/" className={styles.logo}>
-            <div className={styles.logoTop}>
-              MilesAl <span className={styles.logoIcon}>😊</span> ng
-            </div>
-            <div className={styles.logoBottom}>Smiles</div>
+            <img src="/logo.png" alt="Miles Along Smiles Logo" className={styles.logoImage} />
           </Link>
           <ul className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
             <li><Link href="/" className={styles.link} onClick={toggleMenu}>Home</Link></li>

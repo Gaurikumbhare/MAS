@@ -14,10 +14,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <h3 style={{ margin: 0, color: '#4a148c', display: 'flex', alignItems: 'center' }}>
-              MilesAl <span style={{ width: '30px', height: '30px', background: 'linear-gradient(135deg, #e91e63, #ff9800)', borderRadius: '50%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: 'white', margin: '0 4px', fontSize: '1rem' }}>😊</span> ng
-            </h3>
-            <h3 style={{ margin: '0 0 1rem 1rem', color: '#e91e63' }}>Smiles</h3>
+            <img src="/logo.png" alt="Miles Along Smiles Logo" style={{ height: '80px', width: 'auto', marginBottom: '1rem' }} />
             <p>Every beautiful journey begins with a smile.</p>
           </div>
           
