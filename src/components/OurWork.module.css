@@ -155,7 +155,6 @@
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 15px;
-  flex-grow: 1;
 }
 
 .readMore {
@@ -173,6 +172,7 @@
   border-radius: 6px;
   padding: 10px;
   text-align: left;
+  margin-top: auto;
 }
 
 .footerCol {
