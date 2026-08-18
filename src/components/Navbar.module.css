@@ -226,3 +226,16 @@
     top: -8px;
   }
 }
+
+@media (max-width: 576px) {
+  .logoImage {
+    height: 38px;
+  }
+  .actions {
+    gap: 0.5rem;
+  }
+  .actions a button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}

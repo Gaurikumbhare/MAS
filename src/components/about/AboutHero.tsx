@@ -9,7 +9,7 @@ export default function AboutHero() {
         <img src="/sticker-paper-plane.png" alt="Paper Plane" className="sticker sticker-delay-1" style={{ position: 'absolute', bottom: '-50px', left: '-30px', width: '120px', transform: 'rotate(-10deg)', zIndex: 10 }} />
         
         <div className={styles.imageContainer}>
-
+          <img src="/image copy 2.png" alt="At Miles Along Smiles, the early years count" className={styles.heroImage} />
         </div>
       </div>
     </section>
