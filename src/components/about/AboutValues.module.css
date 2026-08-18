@@ -56,5 +56,33 @@
 }
 
 @media (max-width: 768px) {
-  /* removed column flex-direction */
+  .grid {
+    gap: 1rem;
+  }
+  .card {
+    padding: 1.25rem;
+  }
+  .titleVision, .titleMission, .titlePhilosophy {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    gap: 0.5rem;
+  }
+  .card {
+    padding: 1rem 0.75rem;
+  }
+  .titleVision, .titleMission, .titlePhilosophy {
+    font-size: 1.3rem;
+  }
+  .text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
 }

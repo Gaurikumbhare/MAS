@@ -124,7 +124,8 @@
 
 @media (max-width: 480px) {
   .grid {
-    /* removed grid-template-columns: 1fr; */
+    padding: var(--spacing-xs);
+    gap: var(--spacing-xs);
   }
   .titleWrapper h2 {
     font-size: 2rem;

@@ -212,8 +212,35 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .cardsGrid {
-    /* removed grid-template-columns: 1fr; */
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .whyUsSection {
+    padding: 4rem 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    margin-bottom: 3rem;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  .imageWrapper {
+    width: 180px;
+    height: 180px;
+  }
+  /* Adjust the pseudoelement outline to match the new size */
+  .imageWrapper::after {
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
   }
 }
