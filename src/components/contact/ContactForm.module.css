@@ -138,7 +138,7 @@
 }
 
 .btnSubmit {
-  background-color: #94999c; /* Grey submit button */
+  background-color: var(--primary); /* Deep Purple */
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -147,12 +147,15 @@
   font-weight: 700;
   cursor: pointer;
   align-self: flex-start;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease;
   margin-top: 0.5rem;
+  box-shadow: 0 4px 10px rgba(142, 36, 170, 0.3);
 }
 
 .btnSubmit:hover {
-  background-color: #7b8083;
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(142, 36, 170, 0.4);
 }
 
 @media (max-width: 900px) {
