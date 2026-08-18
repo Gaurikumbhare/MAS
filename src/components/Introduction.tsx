@@ -10,7 +10,9 @@ export default function Introduction() {
       </div>
       <div className={`container ${styles.container}`}>
         <h2 className={`font-handwriting ${styles.title}`}>
-          ✨ About Miles Along Smiles ✨
+          <span>✨</span>
+          <span>About Miles Along Smiles</span>
+          <span>✨</span>
         </h2>
         
         <p className={styles.paragraph}>
