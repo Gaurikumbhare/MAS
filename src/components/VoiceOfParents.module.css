@@ -1,0 +1,157 @@
+.section {
+  padding: 6rem 0;
+  background-color: #fffaf5;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.titleContent {
+  position: relative;
+  display: inline-block;
+}
+
+.titleContent h2 {
+  font-size: 3.5rem;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.titleUnderline {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 2rem;
+  padding: 1rem 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselItem {
+  scroll-snap-align: center;
+  flex: 0 0 calc(33.333% - 1.33rem);
+  min-width: 260px;
+  max-width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: none; /* Hidden on desktop since 3 items fit */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+  background: var(--primary-dark, #ff9800);
+}
+
+.leftArrow {
+  left: 0;
+}
+
+.rightArrow {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .carouselItem {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+  .arrow {
+    display: flex; /* Show on mobile where scrolling is needed */
+  }
+  .leftArrow {
+    left: 5px;
+  }
+  .rightArrow {
+    right: 5px;
+  }
+}
+
+.videoCard {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 4px solid #fff;
+  background: #000;
+  width: 100%;
+}
+
+.textCard {
+  border-radius: 20px;
+  background: #fff;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+}
+
+.textCard h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.textCard p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

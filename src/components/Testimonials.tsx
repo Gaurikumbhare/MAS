@@ -1,8 +1,11 @@
 import styles from './Testimonials.module.css';
 
 const reviews = [
-  { id: 1, text: "Miles Along Smiles truly feels like a second home for our daughter. The play-based learning approach has made her so much more confident and curious!", author: "Priya S., Parent", colorClass: styles.purpleCard, avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" },
-  { id: 2, text: "The teachers are incredibly nurturing. I love how they focus on both academics and social skills. My son loves going to school every day.", author: "Rahul M., Parent", colorClass: styles.yellowCard, avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" },
+  { id: 1, text: "I am very happy with the School. Teachers & Admin & Didis. I feel very comfortable dropping Siddu for the whole day. Overall very happy with his growth. Thank you", author: "Dr. Shilpa Chokhandre, Parent", colorClass: styles.purpleCard, avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" },
+  { id: 2, text: "Everything is just perfect here. Exactly how I imagined my babys preschool should be. The teachers here are excellent. Keep up the good work.", author: "Dr. Akansha Barik, Parent", colorClass: styles.yellowCard, avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" },
+  { id: 3, text: "Our experience is absolutely amazing coming from a different culture we have come to realise our son is settling in as if he always belongs here. Home away from home is what we feel for the school. Thanks a million for caring after our little one!", author: "Mrs. Alpa Agrawal, Parent", colorClass: styles.greenCard, avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80" },
+  { id: 4, text: "I appreciate the school's efforts towards my child. Very happy with the overall progress of my child", author: "Dr. Sweety Dande, Parent", colorClass: styles.pinkCard, avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80" },
+  { id: 5, text: "We are satisfied with the progress & efforts of the school Activities & Management. - Thank you", author: "Mrs. Abhaya Shende, Parent", colorClass: styles.blueCard, avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" }
 ];
 
 export default function Testimonials() {
@@ -55,35 +58,25 @@ export default function Testimonials() {
           </div>
         </div>
         
-        <div className={styles.grid}>
-          {reviews.map((rev) => (
-            <div key={rev.id} className={`${styles.card} ${rev.colorClass}`}>
-              <div className={styles.cardHeader}>
-                <div className={styles.stars}>
-                  <svg width="120" height="24" viewBox="0 0 120 24" fill="none" stroke="#FFC107" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                    <polygon points="36 2 39.09 8.26 46 9.27 41 14.14 42.18 21.02 36 17.77 29.82 21.02 31 14.14 26 9.27 32.91 8.26 36 2"/>
-                    <polygon points="60 2 63.09 8.26 70 9.27 65 14.14 66.18 21.02 60 17.77 53.82 21.02 55 14.14 50 9.27 56.91 8.26 60 2"/>
-                    <polygon points="84 2 87.09 8.26 94 9.27 89 14.14 90.18 21.02 84 17.77 77.82 21.02 79 14.14 74 9.27 80.91 8.26 84 2"/>
-                    <polygon points="108 2 111.09 8.26 118 9.27 113 14.14 114.18 21.02 108 17.77 101.82 21.02 103 14.14 98 9.27 104.91 8.26 108 2"/>
-                  </svg>
-                </div>
-                <div className={styles.quoteIcon}>”</div>
-              </div>
-              
-              <p className={styles.quote}>"{rev.text}"</p>
-              
-              <div className={styles.authorSection}>
-                <img src={rev.avatar} alt={rev.author} className={styles.avatar} />
-                <div className={styles.authorInfo}>
-                  <div className={styles.authorName}>{rev.author}</div>
-                  <svg className={styles.authorUnderline} viewBox="0 0 100 10" preserveAspectRatio="none">
-                    <path d="M0,5 Q 50,8 100,2" fill="none" stroke="#FFC107" strokeWidth="3" strokeLinecap="round"/>
-                  </svg>
+        <div className={styles.marqueeContainer}>
+          <div className={styles.marqueeTrack}>
+            {[...reviews, ...reviews].map((rev, index) => (
+              <div key={`${rev.id}-${index}`} className={`${styles.card} ${rev.colorClass}`}>
+
+                
+                <p className={styles.quote}>"{rev.text}"</p>
+                
+                <div className={styles.authorSection}>
+                  <div className={styles.authorInfo}>
+                    <div className={styles.authorName}>{rev.author}</div>
+                    <svg className={styles.authorUnderline} viewBox="0 0 100 10" preserveAspectRatio="none">
+                      <path d="M0,5 Q 50,8 100,2" fill="none" stroke="#FFC107" strokeWidth="3" strokeLinecap="round"/>
+                    </svg>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
