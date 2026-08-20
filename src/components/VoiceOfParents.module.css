@@ -1,48 +1,117 @@
 .section {
   padding: 6rem 0;
-  background-color: #fffaf5;
+  background-color: #fffdf5; /* Creamy off-white */
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Decorative Elements */
+.decorations svg {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.8;
+}
+.star1 { top: 10%; left: 5%; width: 40px; transform: rotate(-15deg); }
+.star2 { bottom: 15%; right: 10%; width: 30px; transform: rotate(15deg); }
+.star3 { top: 40%; left: 15%; width: 25px; transform: rotate(30deg); }
+.heart1 { top: 15%; right: 5%; width: 50px; transform: rotate(20deg); }
+.heart2 { bottom: 10%; left: 8%; width: 45px; transform: rotate(-20deg); }
+.heart3 { top: 60%; right: 12%; width: 35px; transform: rotate(-10deg); }
+.cloud1 { top: 25%; right: 15%; width: 80px; opacity: 0.6; }
+.cloud2 { bottom: 25%; left: 2%; width: 60px; opacity: 0.5; }
+.plane1 { top: 5%; left: 20%; width: 45px; transform: rotate(15deg); }
+.circle1 { bottom: 30%; right: 5%; width: 20px; opacity: 0.5; }
+.circle2 { top: 50%; left: 5%; width: 15px; opacity: 0.6; }
+
+/* Header & Title */
 .header {
   margin-bottom: 3rem;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 .titleWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  flex-direction: column;
 }
 
-.titleContent {
+.mainTitle {
+  font-family: 'Dancing Script', 'Caveat', cursive; /* Using cursive fallbacks */
+  font-size: 4rem;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.purpleText { color: #8E24AA; font-weight: 700; }
+.pinkText { color: #E91E63; font-weight: 700; }
+.orangeText { color: #F57C00; font-weight: 700; }
+
+.titleHeartWrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 
-.titleContent h2 {
-  font-size: 3.5rem;
-  color: var(--primary);
-  margin: 0;
-  line-height: 1.1;
-}
-
-.titleUnderline {
+.titleHeart {
   position: absolute;
-  bottom: -15px;
-  left: 0;
   width: 100%;
-  height: 20px;
+  height: 100%;
+  fill: #FFCA28;
 }
 
+.titleHeartText {
+  position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dividerLine {
+  height: 2px;
+  width: 40px;
+  background-color: #FFCA28;
+  border-radius: 2px;
+}
+
+.dividerHeart {
+  width: 16px;
+  height: 16px;
+  fill: #E91E63;
+}
+
+/* Carousel */
 .carouselWrapper {
   display: flex;
   align-items: center;
   position: relative;
   width: 100%;
   max-width: 100vw;
+  z-index: 10;
 }
 
 .carousel {
@@ -78,11 +147,11 @@
   border-radius: 50%;
   width: 36px;
   height: 36px;
-  display: none; /* Hidden on desktop since 3 items fit */
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: transform 0.2s, background 0.2s;
 }
@@ -92,12 +161,128 @@
   background: var(--primary-dark, #ff9800);
 }
 
-.leftArrow {
-  left: 0;
+.leftArrow { left: -20px; }
+.rightArrow { right: -20px; }
+
+/* Video Card */
+.videoCard {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 4px solid #fff;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.rightArrow {
-  right: 0;
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Cards */
+.textCard {
+  border-radius: 20px;
+  background: #fff;
+  padding: 2.5rem 2rem 5rem 2rem; /* Extra padding at bottom for wave */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.iconWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.iconCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dashed #ddd;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon {
+  width: 100%;
+  height: 100%;
+}
+
+.cardTitle {
+  font-family: 'Dancing Script', 'Caveat', cursive;
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.cardDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardDivider .dividerLine {
+  width: 30px;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.cardDivider .dividerHeart {
+  width: 12px;
+  height: 12px;
+}
+
+.textCard p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  z-index: 2;
+}
+
+/* Wave Bottoms */
+.waveBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+.waveBottom svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wavePurple { color: #BA68C8; }
+.waveOrange { color: #FFB74D; }
+
+.quoteMark {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 5rem;
+  color: rgba(255,255,255,0.8);
+  font-family: Georgia, serif;
+  line-height: 0;
 }
 
 @media (max-width: 768px) {
@@ -106,52 +291,12 @@
     min-width: 100%;
   }
   .arrow {
-    display: flex; /* Show on mobile where scrolling is needed */
+    display: flex;
   }
-  .leftArrow {
-    left: 5px;
+  .leftArrow { left: 5px; }
+  .rightArrow { right: 5px; }
+  
+  .mainTitle {
+    font-size: 3rem;
   }
-  .rightArrow {
-    right: 5px;
-  }
-}
-
-.videoCard {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border: 4px solid #fff;
-  background: #000;
-  width: 100%;
-}
-
-.textCard {
-  border-radius: 20px;
-  background: #fff;
-  padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  width: 100%;
-}
-
-.textCard h3 {
-  color: var(--primary);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.textCard p {
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.video {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
