@@ -54,7 +54,11 @@ export default function Footer() {
               </li>
               <li>
                 <span>✉️</span>
-                <span>info@milesalongsmiles.com</span>
+                <span>
+                  <a href="mailto:milesalongsmiles@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    milesalongsmiles@gmail.com
+                  </a>
+                </span>
               </li>
             </ul>
           </div>

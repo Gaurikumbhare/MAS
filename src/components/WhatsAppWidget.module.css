@@ -1,0 +1,37 @@
+.whatsappWidget {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 65px;
+  height: 65px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px;
+}
+
+.whatsappWidget:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsappWidget svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .whatsappWidget {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    padding: 12px;
+  }
+}
