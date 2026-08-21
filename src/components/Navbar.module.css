@@ -19,6 +19,8 @@
   height: 65px;
   width: auto;
   object-fit: contain;
+  transform: scale(1.4);
+  transform-origin: left center;
 }
 .logo {
   display: flex;

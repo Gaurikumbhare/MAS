@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="container">
         <nav className={styles.nav}>
           <Link href="/" className={styles.logo}>
-            <img src="/new_logo.png" alt="Miles Along Smiles Logo" className={styles.logoImage} />
+            <img src="/image%20copy%205.png" alt="Miles Along Smiles Logo" className={styles.logoImage} />
           </Link>
           <ul className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
             <li><Link href="/" className={styles.link} onClick={toggleMenu}>Home</Link></li>

@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <img src="/new_logo.png" alt="Miles Along Smiles Logo" style={{ height: '80px', width: 'auto', marginBottom: '1rem' }} />
+            <img src="/image%20copy%205.png" alt="Miles Along Smiles Logo" style={{ height: '100px', width: 'auto', marginBottom: '1rem' }} />
             <p>Every beautiful journey begins with a smile.</p>
           </div>
           
